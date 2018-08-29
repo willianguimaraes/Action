@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="/bootstrap/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+        <div class="container" style="align: center">
+            <!--            <img src="resources/image/image.png" alt="tela" />-->
+            <h:form>
+                <section>
+                    <label class="input"> <i class="icon-append fa fa-user"></i>    
+                        <h:inputText id="usuario" label="Login" styleClass="usuario" style="align-content: center; border-radius: 10px" required="true" requiredMessage="Informe o Login" />
+                        <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i></b></label>
+                </section>
+                <section>
+                    <label class="label">Senha</label>
+                    <label class="input"> <i class="icon-append fa fa-lock"></i>
+                        <h:inputSecret id="senha" label="Senha" styleClass="senha" required="true" requiredMessage="Informe a Senha" />
+                        <!--<input type="password" name="password" />-->
+                        <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i>Senha</b> </label>
+                    <div class="note">
+
+                        <h:outputLink  value="esqueceuSenha.xbrain">
+                            Esqueci minha Senha.
+                        </h:outputLink>
+
+
+                        <!--<a href="forgotpassword.html">Lembrar senha?</a>-->
+                    </div>
+                </section>
+                <!--                <h:inputText title="Login" style="align-content: center; border-radius: 10px" alt="Usuario" class="input-group-addon"/>-->
+            </h:form>
+        </div>
+    </h:body>
+</html>

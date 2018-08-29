@@ -1,0 +1,21 @@
+<ui:fragment    xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <div class="page-footer" style="background-color: whitesmoke;" >
+        <div class="row">
+            <div class="col-xs-6 col-sm-6">
+                <span >Action desenvolvimento de pessoas<span id="ano"></span>. Todos os direitos reservados.</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getAno() {
+            var d = new Date();
+            var n = d.getFullYear();
+            document.getElementById("ano").innerHTML = n;
+        }
+        getAno();
+    </script>
+</ui:fragment>

@@ -1,0 +1,125 @@
+<ui:composition template="../template/templatePagina.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"  
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:define name="nomeTela">
+        Cadastro de Usuario
+    </ui:define>
+
+    <ui:define name="caminhoTela">
+        Cadastro Usuario
+    </ui:define>
+
+    <ui:define name="conteudoTela">         
+
+        <div class="container">
+            <div class="well">
+                <h:form>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h:outputLabel value="Nome: " for="nome" />
+                            <h:inputText id="nome" title="Nome"  value="#{usuarioControle.usuario.nome}" />
+                        </div>
+                        <div class="col-md-3">
+                            <h:outputLabel value="CPF: " for="cpf" />
+                            <h:inputText id="cpf" title="CPF"  value="#{usuarioControle.usuario.cpf}" />
+                        </div>
+                        <div class="col-md-3">
+                            <h:outputLabel value="Rg: " for="rg" />
+                            <h:inputText  title="RG" id="rg" value="#{usuarioControle.usuario.rg}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h:outputLabel value="E-Mail" for="email" />
+                            <h:inputText id="email" title="E-mail" value="#{usuarioControle.usuario.email}" />
+                        </div>
+                        <div class="col-md-6">
+                            <h:outputLabel value="Telefone Residencial" for="telefoneResidencial" />
+                            <h:inputText id="telefoneResidencial" title="Telefone Residencial"  value="#{usuarioControle.usuario.telefoneResidencial}" />
+                        </div>
+                        <div class="col-md-3">
+                            <h:outputLabel value="Celular: " for="email" />
+                            <h:inputText id="telefoneCelular" title="Telefone Celular"  value="#{usuarioControle.usuario.telefoneCelular}" />
+                        </div>
+                    </div>
+
+                    <h:commandLink action="#{usuarioControle.salvar('')}" styleClass="btn btn-success">
+                        <i class="fa fa-check"></i> Salvar
+
+                    </h:commandLink>    
+
+
+                </h:form>
+            </div>
+        </div>
+
+    </ui:define>
+
+    <ui:define name="jsRodape">      
+
+        <!-- PAGE RELATED PLUGIN(S) -->
+
+    </ui:define>
+
+</ui:composition>
+
+
+
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastro Usuario</title>
+        <script src="/bootstrap/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+        Cadastro de Usuario
+        <div class="container">
+        <b:well>
+            <h:form>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h:outputLabel value="Nome: " for="nome" />
+                        <h:inputText id="nome" title="Nome"  value="# {usuarioControle.usuario.nome}" />
+                    </div>
+                    <div class="col-md-3">
+                        <h:outputLabel value="CPF: " for="cpf" />
+                        <h:inputText id="cpf" title="CPF"  value="# {usuarioControle.usuario.cpf}" />
+                    </div>
+                    <div class="col-md-3">
+                        <h:outputLabel value="Rg: " for="rg" />
+                        <h:inputText  title="RG" id="rg" value="# {usuarioControle.usuario.rg}" />
+                   </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h:outputLabel value="E-Mail" for="email" />
+                        <h:inputText id="email" title="E-mail" value="# {usuarioControle.usuario.email}" />
+                   </div>
+                    <div class="col-md-6">
+                        <h:outputLabel value="Telefone Residencial" for="telefoneResidencial" />
+                        <h:inputText id="telefoneResidencial" title="Telefone Residencial"  value="# {usuarioControle.usuario.telefoneResidencial}" />
+                    </div>
+                    <div class="col-md-3">
+                        <h:outputLabel value="Celular: " for="email" />
+                        <h:inputText id="telefoneCelular" title="Telefone Celular"  value="# {usuarioControle.usuario.telefoneCelular}" />
+                    </div>
+                </div>
+                        
+                        <h:commandLink action="# {usuarioControle.salvar('')}" styleClass="btn btn-success">
+                        <i class="fa fa-check"></i> Salvar
+
+                    </h:commandLink>    
+                
+                    
+            </h:form>
+        </b:well>
+        </div>
+    </h:body>
+</html>-->
+

@@ -1,0 +1,48 @@
+<ui:fragment    xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+
+    <h:form id="topoPaginaForm">
+        <!-- HEADER -->
+        <header id="header">
+            <div id="logo-group">
+                <!-- PLACE YOUR LOGO HERE -->
+                <span id="logo"> <img src="http://estatico.xbrain.com.br/GORASTREAMENTO/img/rastreamento_sem_subtitulo_branco_laranja.png" style="width: 60px; height: 20px;" alt="Action" />  </span>
+
+
+            </div>
+
+            <div class="pull-right">
+                <div id="hide-menu" class="btn-header pull-right">
+                    <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
+                </div>
+                <div class="btn-header pull-right">
+                    <ul id="profile-img" class="dropdown-toggle">
+                        <li class="">
+                            <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown" > 
+                                <img src="http://estatico.xbrain.com.br/GORASTREAMENTO/img/avatars/male.png" style="height: 50px; padding: 10px;" />  
+                            </a>
+                            <ul class="dropdown-menu pull-right">                              
+                                <li>
+                                    <h:commandLink styleClass="padding-10 padding-top-0 padding-bottom-0" title="Perfil"
+                                                   action="/paginas/cadastro/usuario.xhtml?faces-redirect=true">
+                                        <f:setPropertyActionListener value="true" target="#{flash['editarLogado']}" />        
+
+                                        <i class="fa fa-user"></i> <u>P</u>erfil
+                                    </h:commandLink>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <!--                                        <a href="# {request.contextPath}/logout/logout.xbrain" class="padding-10 padding-top-5 padding-bottom-5"><i class="fa fa-sign-out fa-lg"></i> <strong><u>S</u>air</strong></a>-->
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--</ui:fragment>-->
+        </header>       
+    </h:form>
+</ui:fragment>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Lista Usuarios</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <b:well>
+            <h:form>
+                <h:dataTable value="#{usuarioControle.usuario}" var="cliente" styleClass="table">
+                    <h:column>
+                        <f:facet name="header">Nome</f:facet>
+                        <h:outputText value="#{usuarioControle.usuario.nome}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">CPF</f:facet>
+                        <h:outputText  value="#{usuarioControle.usuario.cpf}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">RG</f:facet>
+                        <h:outputText   value="#{usuarioControle.usuario.rg}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">E-mail</f:facet>
+                        <h:outputText  value="#{usuarioControle.usuario.email}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Telefone Residencial</f:facet>
+                        <h:outputText  value="#{usuarioControle.usuario.telefoneResidencial}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Telefone Celular</f:facet>
+                        <h:outputText  value="#{usuarioControle.usuario.telefoneCelular}" />
+                    </h:column>
+                    <h:column>
+<!--                        <h:commandButton value="salvar" action="# {usuarioControle.salvar("")}" />-->
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </b:well>
+    </body>
+</html>
